@@ -4,22 +4,25 @@
 #include <string>
 #include "Personagem.h"
 #include "../caderno/Caderno.h"
+#include "../itens/Item.h"
 using namespace std;
 
 class Detetive : public Personagem
 {
 protected:
-    Caderno caderno;
     int intuicao;
+    Caderno caderno;
     int cafe;
 
 public:
-    Detetive(string nome, int habilidade, int energia, Caderno caderno, int intuicao, int cafe);
+    Detetive(string nome, int observacao, int energia, int intuicao, Caderno caderno,  int cafe);
     virtual ~Detetive();
 
-    Caderno getCaderno();
     int getIntuicao();
+    Caderno getCaderno();
     int getCafe();
+
+    void listarInfos();
 };
 
 #endif

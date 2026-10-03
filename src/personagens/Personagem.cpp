@@ -1,11 +1,7 @@
-/*#include "../../include/personagens/Personagem.h"
+#include "../../include/personagens/Personagem.h"
 #include <iostream>
 
-Personagem::Personagem()
-{
-}
-
-Personagem::Personagem(string nome, int observacao, int calma, int intuicao): nome(nome), observacao(observacao), calma(calma), intuicao(intuicao)
+Personagem::Personagem(string nome, int observacao, int calma): nome(nome), observacao(observacao), calma(calma)
 {
 }
 
@@ -16,4 +12,14 @@ Personagem::~Personagem()
 string Personagem::getNome()
 {
     return nome;
-}*/
+}
+
+int Personagem::getObservacao()
+{
+    return observacao;
+}
+
+int Personagem::getCalma()
+{
+    return calma;
+}

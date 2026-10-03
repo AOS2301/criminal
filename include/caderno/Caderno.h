@@ -2,7 +2,7 @@
 #define Caderno_H
 
 #include <string>
-#include "Item/Item.h"
+#include "../itens/Item.h"
 #include <vector>
 using namespace std;
 
@@ -14,13 +14,8 @@ private:
 
 public:
     Caderno();
-    Caderno(string nome, int observacao, int calma, int intuicao);
+    //Caderno(string nome, int observacao, int calma, int intuicao);
     virtual ~Caderno();
-
-    string getNome();
-    int getObservacao();
-    int getCalma();
-    int getIntuicao();
 };
 
 #endif

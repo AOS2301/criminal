@@ -2,19 +2,17 @@
 #define Leitor_H
 
 #include <string>
-#include "cenas/Cena.h"
 using namespace std;
 
 class Leitor
 {
-private:
-    string caminhoArquivo;
 public:
     Leitor();
     ~Leitor();
 
     void lerArquivo(string caminhoArquivo);
     int lerOpcao(int minimo, int maximo);
+    void pausar();
     //void lerCena(Cena &cena);
 };
 

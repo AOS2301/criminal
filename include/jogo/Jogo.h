@@ -3,11 +3,13 @@
 
 #include <string>
 #include "Leitor.h"
+#include "../personagens/Detetive.h"
 using namespace std;
 
 class Jogo
 {
 private:
+    Detetive* detetive;
     Leitor leitor;
     int cenaAtual;
 public:
