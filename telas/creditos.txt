@@ -1,0 +1,11 @@
+==================================================
+                    CREDITOS
+==================================================
+
+  Programador:
+    - Arthur Osvaldo Schmitz  
+
+  Trabalho Estudo!
+  Programacao Orientada a Objetos - UNISINOS
+
+--------------------------------------------------

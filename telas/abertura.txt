@@ -1,0 +1,16 @@
+==================================================
+            O Detetive - 009
+==================================================
+
+  O jogador é um detetive investigando um crime
+  numa mansão. Ele explora cômodos, coleta pistas,
+  interroga suspeitos e, no final, faz a acusação.
+  Se acusar a pessoa certa com as pistas necessárias,
+  resolve o caso. Caso contrário, o caso é arquivado sem solução.
+
+--------------------------------------------------
+  1 - Novo jogo
+  2 - Carregar jogo
+  3 - Creditos
+  4 - Sair
+--------------------------------------------------

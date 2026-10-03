@@ -1,0 +1,19 @@
+==================================================
+              CRIACAO DO PERSONAGEM
+==================================================
+
+Todo personagem comeca com valores minimos:
+
+  OBSERVACAO = 4  (destreza em combate, maximo 10)
+  CALMA      = 8  (pontos de vida,      maximo 16)
+  INTUICAO   = 4  (testes de sorte,     maximo 10)
+
+Voce tem 10 PONTOS EXTRAS para distribuir entre os
+tres atributos. Os que sobrarem ficam guardados
+para usar depois, na tela de inventario.
+
+  Extras em OBSERVACAO: de 0 a 6
+  Extras em CALMA:      de 0 a 8
+  Extras em INTUICAO:   de 0 a 6
+
+--------------------------------------------------
