@@ -13,5 +13,5 @@ JogoSalvo::~JogoSalvo()
 
 void JogoSalvo::salvarJogo(string nomeSave)
 {
-    ofstream arq("data/" + nome + ".txt");
+    ofstream arq("data/" + nomeSave + ".txt");
 }

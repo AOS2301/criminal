@@ -23,12 +23,3 @@ int Detetive::getCafe()
 {
     return cafe;
 }
-
-void Detetive::listarInfos()
-{
-    cout << nome << endl;
-    cout << observacao << endl;
-    cout << intuicao << endl;
-    cout << "Caderno está vazio por enquanto" << endl;
-    cout << cafe << endl;
-}

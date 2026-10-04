@@ -11,7 +11,7 @@ Leitor::~Leitor()
 {
 }
 
-void Leitor::lerArquivo(string caminho)
+void Leitor::imprimirArquivo(string caminho)
 {
     ifstream arq(caminho);
     string linha;

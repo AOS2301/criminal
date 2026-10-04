@@ -3,7 +3,10 @@
 
 #include <string>
 #include "Leitor.h"
+#include "../cenas/Cena.h"
 #include "../personagens/Detetive.h"
+#include "../personagens/Perito.h"
+#include "../personagens/Investigador.h"
 using namespace std;
 
 class Jogo
@@ -17,6 +20,7 @@ public:
     ~Jogo();
 
     void executar();
+    void jogar();
     void criarPersonagem();
     void mostrarCreditos();
     Leitor getLeitor();

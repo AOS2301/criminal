@@ -16,6 +16,8 @@ public:
     Caderno();
     //Caderno(string nome, int observacao, int calma, int intuicao);
     virtual ~Caderno();
+
+    void adicionarItem(Item item);
 };
 
 #endif

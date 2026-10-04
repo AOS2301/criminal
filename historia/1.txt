@@ -1,0 +1,8 @@
+n
+A chuva bate forte nas janelas da Mansão Vasconcelos. No escritório, o corpo do patriarca Otávio Vasconcelos foi encontrado ontem à noite, caído ao lado da escrivaninha. Há uma taça de vinho pela metade sobre a mesa, um quadro torto na parede e um vão escuro atrás da estante. O mordomo aguarda no corredor.
+I: Chave do escritório;f;0;0;Abre a porta do escritório do falecido
+C: 1
+#2: Chamar o mordomo para um interrogatório
+#3: Endireitar o quadro torto na parede
+#4{forense}: Analisar a taça de vinho sobre a mesa
+#5[Lanterna]: Investigar o vão escuro atrás da estante

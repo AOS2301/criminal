@@ -17,15 +17,15 @@ Jogo::~Jogo()
 
 void Jogo::executar()
 {
-    
-
     while (true)
     {
-        leitor.lerArquivo("telas/abertura.txt");
+        leitor.imprimirArquivo("telas/abertura.txt");
         int selecao = leitor.lerOpcao(1, 4);
         if (selecao == 1)
         {
             criarPersonagem();
+            leitor.pausar();
+            jogar();
             return;
         }
         else if (selecao == 2)
@@ -44,10 +44,17 @@ void Jogo::executar()
     }
 }
 
+void Jogo::jogar(){
+    int cenaAtual = 1;
+    while(true){
+        //Comandos do jogo
+    }
+}
+
 void Jogo::criarPersonagem()
 {
     string nome;
-    leitor.lerArquivo("telas/criacaoDetetive.txt");
+    leitor.imprimirArquivo("telas/criacaoDetetive.txt");
     cout << "Nome do detetive: ";
     getline(cin, nome);
     while (nome == "")
@@ -102,14 +109,27 @@ void Jogo::criarPersonagem()
         cout << "Voce guardou " << guardados << " ponto(s). Use quando quiser na tela de inventario." << endl;
     }
 
-    if(detetive != nullptr){
-        delete detetive;
+    cout << "Perfil do detetive:" << endl;
+    cout << "  1 - Perito (ja tem analise forense)" << endl;
+    cout << "  2 - Investigador de campo (precisa do Kit forense)" << endl;
+    int perfil = leitor.lerOpcao(1, 2);
+
+    delete detetive; // seguro mesmo se for nullptr
+
+    Caderno caderno;
+    if (perfil == 1)
+    {
+        detetive = new Perito(nome, observacao, calma, intuicao, caderno, 3);
+    } else
+    {
+        detetive = new Investigador(nome, observacao, calma, intuicao, caderno, 3);
     }
-    detetive = new Detetive(nome, observacao, calma, intuicao, caderno, 2);
+
     detetive->listarInfos();
+    detetive->podeExaminar();
 }
 
 void Jogo::mostrarCreditos()
 {
-    leitor.lerArquivo("telas/creditos.txt");
+    leitor.imprimirArquivo("telas/creditos.txt");
 }

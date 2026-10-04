@@ -15,14 +15,15 @@ protected:
     int cafe;
 
 public:
-    Detetive(string nome, int observacao, int energia, int intuicao, Caderno caderno,  int cafe);
+    Detetive(string nome, int observacao, int calma, int intuicao, Caderno caderno,  int cafe);
     virtual ~Detetive();
 
     int getIntuicao();
     Caderno getCaderno();
     int getCafe();
 
-    void listarInfos();
+    virtual void listarInfos() = 0;
+    virtual bool podeExaminar() = 0;
 };
 
 #endif

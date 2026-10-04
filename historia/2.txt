@@ -1,0 +1,8 @@
+i
+O mordomo Alfredo ajeita as luvas brancas e responde antes mesmo de você perguntar que não viu nada, que estava dormindo e que serve esta família há trinta anos.
+N: Mordomo Alfredo
+A: 6
+R: 8
+S: S
+I: Recibo da farmácia;p;1;3;Arsênico comprado na noite do crime
+6;7

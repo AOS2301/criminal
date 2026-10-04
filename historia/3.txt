@@ -1,0 +1,5 @@
+e
+Atrás do quadro há um cofre com um teclado de 4 dígitos. Na moldura, alguém gravou: ao ano em que Helena entrou nesta casa. Sobre a escrivaninha, entre os papéis, há uma certidão de casamento datada de 12 de maio de 1987.
+R: 1987
+T: 3
+8;9

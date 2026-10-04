@@ -10,10 +10,9 @@ public:
     Leitor();
     ~Leitor();
 
-    void lerArquivo(string caminhoArquivo);
+    void imprimirArquivo(string caminhoArquivo);
     int lerOpcao(int minimo, int maximo);
     void pausar();
-    //void lerCena(Cena &cena);
 };
 
 #endif
