@@ -47,6 +47,7 @@ void Jogo::executar()
 void Jogo::jogar(){
     int cenaAtual = 1;
     while(true){
+        Cena* cena = CenaFactory::criar(cenaAtual);
         //Comandos do jogo
     }
 }

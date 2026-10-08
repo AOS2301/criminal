@@ -1,10 +1,42 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        
+        {
+            "name": "Depurar Caso Arquivado",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/caso_arquivado",
+            "args": [],
+            "stopAtEntry": false,
 
+            // Essencial: o jogo abre cenas/N.txt e save.txt com caminho relativo,
+            // então precisa rodar a partir da raiz do projeto.
+            "cwd": "${workspaceFolder}",
+
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Mostra vector, string etc. de forma legível",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Mostra o tipo real (filha) de ponteiros para classe-mãe, ex.: Cena* -> CenaInterrogatorio",
+                    "text": "-gdb-set print object on",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "compilar (debug)",
+
+            // No Windows (MinGW): .exe e console externo, senão o cin não recebe entrada.
+            "windows": {
+                "program": "${workspaceFolder}/caso_arquivado.exe",
+                "externalConsole": true,
+                "miDebuggerPath": "gdb.exe"
+            }
+        }
     ]
 }

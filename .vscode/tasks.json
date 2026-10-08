@@ -1,28 +1,22 @@
 {
+    "version": "2.0.0",
     "tasks": [
         {
-            "type": "cppbuild",
-            "label": "C/C++: gcc arquivo de build ativo",
-            "command": "/usr/bin/gcc",
-            "args": [
-                "-fdiagnostics-color=always",
-                "-g",
-                "${file}",
-                "-o",
-                "${fileDirname}/${fileBasenameNoExtension}"
-            ],
+            "label": "compilar (debug)",
+            "type": "shell",
+            // find src: pega os .cpp de todas as subpastas (cenas/, itens/, jogo/...)
+            // find include: passa -I para include/ e cada subpasta dela,
+            //   assim tanto #include "Cena.h" quanto #include "cenas/Cena.h" funcionam
+            "command": "g++ -g -O0 -std=c++17 -Wall -Wextra $(find include -type d -printf '-I%p ' 2>/dev/null) main.cpp $(find src -name '*.cpp' 2>/dev/null) -o caso_arquivado",
             "options": {
-                "cwd": "${fileDirname}"
+                "cwd": "${workspaceFolder}"
             },
-            "problemMatcher": [
-                "$gcc"
-            ],
+            "problemMatcher": ["$gcc"],
             "group": {
                 "kind": "build",
                 "isDefault": true
             },
-            "detail": "Tarefa gerada pelo Depurador."
+            "detail": "Compila main.cpp + todos os .cpp de src/ com símbolos de debug"
         }
-    ],
-    "version": "2.0.0"
+    ]
 }

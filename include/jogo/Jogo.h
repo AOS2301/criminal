@@ -4,6 +4,7 @@
 #include <string>
 #include "Leitor.h"
 #include "../cenas/Cena.h"
+#include "../cenas/CenaFactory.h"
 #include "../personagens/Detetive.h"
 #include "../personagens/Perito.h"
 #include "../personagens/Investigador.h"

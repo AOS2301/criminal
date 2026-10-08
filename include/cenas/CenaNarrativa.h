@@ -8,12 +8,13 @@ using namespace std;
 class CenaNarrativa : public Cena
 {
 protected:
-    string texto;
+
 public:
     CenaNarrativa();
     virtual ~CenaNarrativa();
     
-    //void executarCena(ifstream cena) override;
+    void carregar(ifstream &arq) override;
+    
 };
 
 #endif
