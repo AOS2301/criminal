@@ -8,10 +8,12 @@ using namespace std;
 class Suspeito : public Personagem
 {
 protected:
-
+    
 public:
     Suspeito(string nome, int observacao, int energia);
     virtual ~Suspeito();
+
+    void listarInfos() override;
 };
 
 #endif

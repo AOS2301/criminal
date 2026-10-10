@@ -30,6 +30,9 @@ void Jogo::executar()
         }
         else if (selecao == 2)
         {
+            // telas/abertura.txt diz que a opção 2 é "Carregar jogo", mas
+            // isso ainda não existe — aqui ela só encerra o programa, igual
+            // à opção 4 ("Sair"). TODO: implementar carregamento de save.
             return;
         }
         else if (selecao == 3)
@@ -37,7 +40,11 @@ void Jogo::executar()
             mostrarCreditos();
             leitor.pausar();
         }
-        else if (selecao == 2)
+        // Bug: aqui estava "else if (selecao == 2)" de novo (duplicado).
+        // Como selecao == 2 já é tratado acima, esse bloco nunca executava
+        // e a opção 4 ("Sair", válida pelo lerOpcao(1, 4)) não tinha efeito:
+        // o loop simplesmente voltava a mostrar o menu.
+        else if (selecao == 4)
         {
             return;
         }
@@ -45,9 +52,19 @@ void Jogo::executar()
 }
 
 void Jogo::jogar(){
+    // Bug: havia também um atributo "cenaAtual" em Jogo.h; essa variável
+    // local tem o mesmo nome e esconde (shadow) o membro, que fica sem uso.
     int cenaAtual = 1;
     while(true){
         Cena* cena = CenaFactory::criar(cenaAtual);
+        if (cena == nullptr) break;
+
+        // cena->jogar(detetive) só compila agora porque Cena::jogar() foi
+        // corrigido para "virtual int jogar(Detetive* detetive) = 0;"
+        // (antes era "virtual void jogar() = 0;", sem parâmetro e sem
+        // retorno, incompatível com esta chamada).
+        cenaAtual = cena->jogar(detetive);
+        delete cena;
         //Comandos do jogo
     }
 }
